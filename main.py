@@ -18,9 +18,7 @@ notifID = 1376776665559994468
 JeuxID = 1376777173079166996
 VerifID = 1376960271729295452
 load_dotenv("Token.env")
-test = os.getenv('DISCORD_TOKEN')
-print(test)
-
+Token = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all(), case_insensitive=True)
 
 bot.remove_command("help")
@@ -50,4 +48,4 @@ async def setup_hook():
 
 bot.setup_hook = setup_hook
 time.sleep(10)
-bot.run(test)
+bot.run(Token)
