@@ -5,6 +5,8 @@ from discord import app_commands
 import discord.gateway
 from discord.ui import Button, View
 
+
+##séléction poste league of legends
 class roleview(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
