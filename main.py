@@ -17,7 +17,7 @@ TicketID = 1376778910259351634
 notifID = 1376776665559994468
 JeuxID = 1376777173079166996
 VerifID = 1376960271729295452
-load_dotenv("Token.env")
+load_dotenv("/home/container/Token.env")
 Token = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all(), case_insensitive=True)
 
