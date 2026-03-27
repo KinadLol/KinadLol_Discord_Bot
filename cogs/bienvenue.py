@@ -18,7 +18,7 @@ class bienvenue(commands.Cog):
         rules = self.bot.get_channel(1107995328285790258)
         avatar = member.avatar
         decoration = member.avatar_decoration
-        background = Image.open("Images/bienvenue.png")
+        background = Image.open("/home/container/Images/bienvenue.png")
         pfp = Image.open(requests.get(str(avatar), stream=True).raw)
 
         w, h = pfp.size
@@ -39,10 +39,10 @@ class bienvenue(commands.Cog):
             deco = Image.open(requests.get(str(decoration), stream=True).raw).convert("RGBA")
             final = deco.resize((236, 236))
             background.paste(final, (772, 122), mask = final)
-            background.save(fp = "images/BackgroundRécent.png")
+            background.save(fp = "/home/container/Images/BackgroundRécent.png")
         else:
-            background.save(fp = "images/BackgroundRécent.png")
-        with open("images/BackgroundRécent.png", 'rb') as image:
+            background.save(fp = "/home/container/Images/BackgroundRécent.png")
+        with open("/home/container/Images/BackgroundRécent.png", 'rb') as image:
             picture = discord.File(image)
             await channel.send(f"Soit le Bienvenue {member.mention} je te prierai d'allez voir les {rules.mention} avant d'accéder pleinement a ce serveur.", file=picture)
         
@@ -55,7 +55,7 @@ class bienvenue(commands.Cog):
         await member.add_roles(roleMembre)
         avatar = member.avatar
         decoration = member.avatar_decoration
-        background = Image.open("Images/bienvenue.png")
+        background = Image.open("/home/container/Images/bienvenue.png")
         pfp = Image.open(requests.get(str(avatar), stream=True).raw)
 
         w, h = pfp.size
@@ -76,10 +76,10 @@ class bienvenue(commands.Cog):
             deco = Image.open(requests.get(str(decoration), stream=True).raw).convert("RGBA")
             final = deco.resize((236, 236))
             background.paste(final, (772, 122), mask = final)
-            background.save(fp = "images/BackgroundRécent.png")
+            background.save(fp = "/home/container/Images/BackgroundRécent.png")
         else:
-            background.save(fp = "images/BackgroundRécent.png")
-        with open("images/BackgroundRécent.png", 'rb') as image:
+            background.save(fp = "/home/container/Images/BackgroundRécent.png")
+        with open("/home/container/Images/BackgroundRécent.png", 'rb') as image:
             picture = discord.File(image)
             await channel.send(f"Soit le Bienvenu(e) {member.mention} je te prierai d'allez voir les {rules.mention} avant d'accéder pleinement au serveur.", file=picture)
 
