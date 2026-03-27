@@ -39,16 +39,6 @@ class TicketsButton(discord.ui.View):
 class moderation(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
-    
-    @commands.Cog.listener()
-    async def on_message(self, message:discord.Message):
-        if message.guild:
-            channel = message.channel
-            User = message.author
-            for Banned in banword:
-                if Banned in message.content.lower():
-                    await channel.purge(limit = 1)
-                    await User.send(f"Sache que ton message a été supprimés car il contient un ou des mots ({Banned}) sur le serveur.")
                     
     @commands.command()
     async def reaction(self, ctx, msg: discord.Message, emote):
