@@ -5,9 +5,6 @@ import asyncio
 from discord.ui import Button, View
 import json
 
-with open('cogs/banword.json', 'r') as file:
-    banword = json.load(file)
-
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 tree = app_commands.CommandTree(client)
