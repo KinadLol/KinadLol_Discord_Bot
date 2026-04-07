@@ -11,7 +11,7 @@ class notifview(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
 
-    async def addrole(role, test):
+    async def addrole(role, test:discord.Interaction):
         if role not in test.user.roles:
             await test.response.send_message("Votre role a bien été ajoutez !", ephemeral=True)
             await test.user.add_roles(role)
