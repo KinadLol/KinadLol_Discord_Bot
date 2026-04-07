@@ -27,7 +27,7 @@ Token = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all(), case_insensitive=True)
 
 bot.remove_command("help")
-cogs = ["league", "moderation", "bienvenue", "reaction.jeux", "reaction.notif", "reaction.verif"]
+cogs = ["league", "moderation", "bienvenue", "reactions.jeux", "reactions.notif", "reactions.verif"]
 
 ##Commande de chargement des command slash
 @bot.command(name="sync") 
