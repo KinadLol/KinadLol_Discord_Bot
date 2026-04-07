@@ -71,7 +71,6 @@ class bienvenue(commands.Cog):
         ##Ajour role au nouveau membre
         await member.add_roles(roleMembre)
 
-        
         ##Création bordure pp
         mask = Image.new('L', (w, h), 0)
         draw = ImageDraw.Draw(mask)
