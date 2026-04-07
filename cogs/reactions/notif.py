@@ -11,21 +11,21 @@ class notifview(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
 
-    async def addrole(role, interaction: discord.Interaction, button: discord.ui.Button):
-        if role not in interaction.user.roles:
-            await interaction.response.send_message("Votre role a bien été ajoutez !", ephemeral=True)
-            await interaction.user.add_roles(role)
+    async def addrole(role, test: discord.Interaction):
+        if role not in test.user.roles:
+            await test.response.send_message("Votre role a bien été ajoutez !", ephemeral=True)
+            await test.user.add_roles(role)
         else:
-            await interaction.response.send_message("Votre role a bien été supprimé", ephemeral=True)
-            await interaction.user.remove_roles(role)
+            await test.response.send_message("Votre role a bien été supprimé", ephemeral=True)
+            await test.user.remove_roles(role)
 
     ##Notif Twitch
     @discord.ui.button(label="Twitch", style=discord.ButtonStyle.success, custom_id='twitch', emoji=discord.PartialEmoji.from_str("Twitch:1376770829198688328"))
     async def twitch(self, interaction: discord.Interaction, button: discord.ui.Button):
         guild = interaction.guild
         role = guild.get_role(1106723385687416932)
-        self.addrole(role)
-        
+        self.addrole(role, test = interaction)
+
     ##Notif Youtube
     @discord.ui.button(label="Youtube", style=discord.ButtonStyle.success, custom_id='youtube', emoji=discord.PartialEmoji.from_str("Youtube:1376771003216167084"))
     async def youtube(self, interaction: discord.Interaction, button: discord.ui.Button):
