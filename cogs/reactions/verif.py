@@ -7,7 +7,7 @@ from discord.ui import Button, View
 class verif(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
-
+    ##Bouton de Vérification lecture règle
     @discord.ui.button(label="Verif", style=discord.ButtonStyle.success, custom_id='verif', emoji=discord.PartialEmoji.from_str("✅"))
     async def verif(self, interaction: discord.Interaction, button: discord.ui.Button):
         guild = interaction.guild

@@ -85,6 +85,5 @@ class moderation(commands.Cog):
         await ctx.channel.purge(limit = quantités)
         await ctx.send(f"vous avez purgé {quantités} messages.", ephemeral=True)
 
-
 async def setup(bot):
     await bot.add_cog(moderation(bot))
