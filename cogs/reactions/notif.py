@@ -24,8 +24,7 @@ class notifview(discord.ui.View):
     @discord.ui.button(label="Twitch", style=discord.ButtonStyle.success, custom_id='twitch', emoji=discord.PartialEmoji.from_str("Twitch:1376770829198688328"))
     async def twitch(self, interaction: discord.Interaction, button: discord.ui.Button):
         guild = interaction.guild
-        role = guild.get_role(1106723385687416932)
-        await self.addrole(role)
+        await self.addrole(guild.get_role(1106723385687416932))
 
     ##Notif Youtube
     @discord.ui.button(label="Youtube", style=discord.ButtonStyle.success, custom_id='youtube', emoji=discord.PartialEmoji.from_str("Youtube:1376771003216167084"))
